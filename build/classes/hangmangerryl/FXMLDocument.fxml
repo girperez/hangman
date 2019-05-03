@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangmangerryl.FXMLDocumentController">
+   <children>
+      <Pane fx:id="mainmenuPane" accessibleRole="NODE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="297.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane fx:id="MainMenuBorder" accessibleRole="NODE" prefHeight="600.0" prefWidth="910.0">
+               <right>
+                  <ImageView fitHeight="420.0" fitWidth="342.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../title.png" />
+                     </image>
+                     <BorderPane.margin>
+                        <Insets right="20.0" />
+                     </BorderPane.margin>
+                  </ImageView>
+               </right>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <left>
+                  <VBox fx:id="MenuVbox" accessibleRole="NODE" alignment="CENTER" prefHeight="600.0" prefWidth="60.0" style="-fx-background-color: #fafafa;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="NewGameButn" focusTraversable="false" mnemonicParsing="false" onAction="#NewGameButnClicked" opacity="0.0" prefHeight="52.0" prefWidth="174.0" style="-fx-background-color: #F5F5F5; -fx-border-color: black; -fx-border-radius: 5px;" text="New Game" textAlignment="CENTER" visible="false">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="24.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="dificultyLabel" opacity="0.0" text="Select Dificulty :" translateY="15.0">
+                           <font>
+                              <Font name="Segoe Print Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="EasyButn" disable="true" mnemonicParsing="false" onAction="#EasyClicked" opacity="0.0" prefHeight="37.0" prefWidth="153.0" style="-fx-background-color: #F0F0F0; -fx-border-color: black; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Easy" translateY="30.0">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="MediumButn" disable="true" mnemonicParsing="false" onAction="#MediumClicked" opacity="0.0" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #F0F0F0; -fx-background-radius: 5px; -fx-border-color: black; -fx-border-radius: 5px;" text="Medium" translateY="45.0">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="HardButn" disable="true" mnemonicParsing="false" onAction="#HardClicked" opacity="0.0" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #F0F0F0; -fx-border-color: black; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Hard" translateY="60.0">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="AdminBtn" alignment="CENTER" mnemonicParsing="false" onAction="#AdminBtnClicked" opacity="0.0" prefHeight="52.0" prefWidth="174.0" style="-fx-background-color: #F5F5F5; -fx-border-color: black; -fx-border-radius: 5px;" text="Admin" textAlignment="CENTER" translateY="-132.0">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </left>
+               <center>
+                  <VBox accessibleRole="NODE" alignment="CENTER" prefHeight="600.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="ArrowButn" mnemonicParsing="false" onAction="#ArrowButnClicked" style="-fx-background-color: #F8F8FF; -fx-border-color: black;" text="&gt;" translateX="-230.0" translateY="-110.0">
+                           <font>
+                              <Font name="Britannic Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="MenuLabel" contentDisplay="RIGHT" text=" Hang Man" textAlignment="CENTER" translateY="20.0">
+                           <font>
+                              <Font name="Segoe Print Bold" size="64.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="MenubyGerryl" text="by Gerryl" translateX="152.0" translateY="-1.0" />
+                        <VBox fx:id="CatVbox" alignment="TOP_CENTER" disable="true" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0" translateX="-360.0" visible="false">
+                           <children>
+                              <Label fx:id="dificultyLabel1" text="Select Dificulty :">
+                                 <font>
+                                    <Font name="Segoe Print Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children></Pane>
+      <Pane accessibleRole="NODE" layoutX="14.0" layoutY="14.0" prefHeight="600.0" prefWidth="910.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane accessibleRole="NODE" prefHeight="600.0" prefWidth="910.0">
+               <left>
+                  <VBox accessibleRole="NODE" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" text="categories" />
+                        <Button mnemonicParsing="false" text="Players" />
+                     </children>
+                  </VBox>
+               </left>
+               <center>
+                  <VBox accessibleRole="NODE" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox accessibleRole="NODE" prefHeight="602.0" prefWidth="810.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefWidth="52.0" text="Button" />
+                              <TableView prefHeight="200.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1" />
+                                  <TableColumn prefWidth="75.0" text="C2" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
